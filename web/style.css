@@ -1,0 +1,12 @@
+.nav
+{
+    display: inline-block;
+    background-color: wheat;
+}
+
+li{
+
+    color: chocolate;
+    font-family:cursive;
+    font-size: medium;
+}
