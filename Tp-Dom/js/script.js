@@ -117,6 +117,31 @@ div2.appendChild(btn4);
 // EJ 12
 
 const select = document.getElementById("selectEj12")
+const parrafin6parrafin_Resurreccion = document.getElementById("pEj12")
+
+select.addEventListener("change", () =>{
+    const valor = select.value; 
+
+    let texto; 
+    switch(valor)
+    {
+        case 'Op1': texto = "opcion 1 pa";
+        break; 
+
+        case 'Op2': texto = "opcion 2 pa"; 
+        break; 
+
+        case 'Op3': texto = "opcion 3 pa"; 
+        break; 
+    }
+
+    parrafin6parrafin_Resurreccion.textContent = texto; 
+})
+
+// EJ 13 
+
+
+
 
 
 
