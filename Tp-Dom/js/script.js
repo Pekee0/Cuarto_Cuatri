@@ -88,13 +88,37 @@ btn3.addEventListener("click", ()=>{
 
 doc2.appendChild(parrrafin4parrafinPorSiempre)
 
-// EJ 10
+// EJ 10 
 const foto1 = document.getElementById("janemba")
 const textofoto1 = document.getElementById("janemba").title
 const parrafin5parrafin_Origenes = document.createElement("p")
 foto1.addEventListener("click", ()=>{
     parrafin5parrafin_Origenes.innerText = textofoto1
 })
+
+div2.appendChild(parrafin5parrafin_Origenes)
+
+// EJ 11
+const btn4 = document.createElement("button")
+btn4.innerText = ("Div_1_Controller")
+
+btn4.addEventListener("click",()=>{
+    if(div.classList.contains("divClass"))
+    {
+        div.classList.remove("divClass")
+    }
+    else
+    div.classList.add("divClass")
+})
+
+div2.appendChild(btn4); 
+
+
+// EJ 12
+
+const select = document.getElementById("selectEj12")
+
+
 
 
 
