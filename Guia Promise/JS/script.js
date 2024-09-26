@@ -58,18 +58,48 @@ Promise.all([EJ3,EJ3bis]).then((resultados) =>{
 
 // EJ 4 
 
-const url = "https://pokeapi.co/api/v2"; 
+const url = "https://pokeapi.co/api/v2/pokemon/dragonite"; 
 
 const getApi = async(url) =>{
 
+
     return new Promise((resolve,reject) =>{
         setTimeout (async() => {
-            const resultado = await fetch(url); 
+            const resultado = await fetch(url,{
+                method:"GET"
+            }); 
             const data = await resultado.json(); 
             resolve(data); 
+            reject("salio todo mal"); 
         }, 2000);
 
     })
 }
 
-getApi.then
+getApi(url).then((resolve) =>{
+    console.log(resolve);
+})
+
+
+/// EJ 5 
+const numeros = [1,2,3,4,5] 
+function EJ5(numeros)
+{
+    return new Promise((resolve, reject) => {
+            setTimeout(() =>{
+            
+                const suma = numeros.reduce((acumulador,actual) =>{
+                    return acumulador + actual;  
+                },0)
+            resolve(suma);   
+            reject("ERROR");
+        },1000)
+
+    })
+}
+
+EJ5(numeros).then((num)=>{
+    console.log(num);
+})
+
+// EJ 6 
