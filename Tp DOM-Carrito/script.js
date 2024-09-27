@@ -37,16 +37,18 @@ btn.addEventListener("click", function ()
         tareitaenlalista.appendChild(btnDelete)
 
         // total
-        const total = document.getElementById("totalCompra").value; 
-        listita.forEach(Tarea1 => {
-            total.innerText = (Tarea1.cantidad.value) * (Tarea1.precio.value)
-        listita.appendChild(total);
-        });
+        const total = document.getElementById("totalCompra"); 
 
+        var listali = [...listita.getElementsByTagName("li")]
+        const items = listali.map(li =>JSON.parse(li.firstChild.nodeValue))
+        total.textContent = `Total =  $${items.reduce((a,b) => a + (b.cantidad * b.precio),0)}`
         /// listener para borrar 
         btnDelete.addEventListener("click",()=>{
         listita.removeChild(tareitaenlalista);
-        
+        var listali = [...listita.getElementsByTagName("li")]
+        const items = listali.map(li =>JSON.parse(li.firstChild.nodeValue))
+        total.textContent = `Total =  $${items.reduce((a,b) => a + (b.cantidad * b.precio),0)}`
+
         })
     }
     else
