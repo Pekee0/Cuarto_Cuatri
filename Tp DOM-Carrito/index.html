@@ -8,21 +8,30 @@
 </head>
 <body> 
 
-    <h1>Gestion de carrito de compras</h1>
+    <div>
+        <h1>Gestion de carrito de compras</h1>
+        
+        <label for="nombre">Nombre</label>
+        <input id = "nombre" type="text" required>
     
-    <label for="nombre">Nombre</label>
-    <input id = "nombre" type="text">
+        <label for="precio">Precio</label>
+        <input id = "precio" type="number" required>
+    
+        <label for="cantidad">Cantidad</label>
+        <input id = "cantidad" type="number" required>
 
-    <label for="precio">Precio</label>
-    <input id = "precio" type="number">
+        <button id ="boton">Agregar Producto</button>
+    </div>
 
-    <label for="cantidad">Cantidad</label>
-    <input id = "cantidad" type="number">
+    <div>
+        <ul id="ListitaDeTareas"></ul>
+    </div>
+    <div>
+        <p id="totalCompra">TOTAL DE COMPRA: $ </p>
+    </div>
 
-    <button id ="boton">Agregar Producto</button>
-    <ul></ul>
+    
 
-
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>

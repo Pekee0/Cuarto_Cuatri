@@ -103,3 +103,24 @@ EJ5(numeros).then((num)=>{
 })
 
 // EJ 6 
+
+function getinfo()
+{
+    return new Promise(async(resolve,reject) =>{
+
+            const info = await fetch(url,{
+                method: "GET"
+            })
+
+        const data1 = await info.json();  
+
+        resolve(data1);
+        reject("SALIO TODO MAL PA "); 
+
+    })
+}
+
+getinfo().then((info)=>{
+    console.log(info);
+    
+})
