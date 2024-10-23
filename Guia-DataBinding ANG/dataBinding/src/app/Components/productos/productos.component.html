@@ -1,9 +1,10 @@
 <h2>Nuevo Producto</h2>
     <form action="">
-        <input  type="number"  placeholder="id">
-         <input type=”text”   placeholder="Nombre">
-         <input type=”number”  placeholder="precio">
+         <input #nombreInput type=”text”   placeholder="Nombre">
+         <input #precioInput type=”number”  placeholder="precio">
+          descuento : <input #descuentoInput type="checkbox">
     </form>
+    <button (click) = "AgregarProducto(nombreInput.value,precioInput.value,descuentoInput.checked)">Agregar Producto</button>
     
 
     <h2>Lista de Productos</h2>
@@ -14,6 +15,7 @@
             {{elemento.nombre}}
             Precio:{{elemento.precio}}
             {{elemento.descuento}}
+            <button (click) = "BorrarProducto(elemento.id)" *ngIf="productos.includes(elemento)" >x</button>
             <span *ngIf="elemento.descuento"></span>
         </span>
     </li>
