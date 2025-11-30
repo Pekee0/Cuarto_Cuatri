@@ -1,0 +1,33 @@
+<h1>Crear Personaje</h1>
+<form [formGroup]="formulario">
+        <fieldset >
+            <label>Id:</label>
+            <input type="text" formControlName="id">
+            <br>
+            @if(formulario.controls['id'].getError('required') &&formulario.controls['id'].touched)
+            {
+                <div class="error">
+                    campo requerido*
+                </div>
+            }
+
+            <label>Nombre: </label>
+            <input type="text" formControlName="nombre">
+            <br>
+
+            <label for="">Universo:</label>
+            <input type="text" formControlName="universo">
+            <br>
+
+            <label for="">Habilidad:</label>
+            <input type="text" formControlName="habilidad">
+            <br>
+
+            <label for="">Ultimate: </label>
+            <input type="text" formControlName="ultimate">
+            <br>
+
+
+            <button (click)="addCharacter()">Crear</button>
+        </fieldset> 
+</form>

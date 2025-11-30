@@ -1,0 +1,18 @@
+{
+  "Characters": [
+    {
+      "id": "10",
+      "nombre": "peke",
+      "universo": "universo 7 ",
+      "habilidad": "sanguchito ",
+      "ultimate": "makankosapo"
+    },
+    {
+      "id": "2",
+      "nombre": "Ivi",
+      "universo": "Yapeyu",
+      "habilidad": "matecito",
+      "ultimate": "100kg press banca"
+    }
+  ]
+}

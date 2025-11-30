@@ -1,0 +1,19 @@
+<app-character-form (emitCharacter)="AddList($event)"></app-character-form>
+<div>
+    <h2>Personajes</h2>
+    <ul>
+        @for (pj of CharacterList; track $index) 
+        {
+            <div>
+                ---------------------------------------------
+                <li> Nombre: {{pj.nombre}}</li>
+                <button type="submit"><a (click)="DeleteCharacter(pj.id!)">Eliminar</a></button>
+                <button ><a [routerLink]="['Details', pj.id]">Ver mas detalles</a></button> 
+            
+               
+               <!--<button (click)="getCharacterbyId('')">obtener id </button>-->
+            </div>
+        }
+    </ul>
+</div>
+
